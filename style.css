@@ -1,0 +1,923 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;  
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*header*/
+
+header{
+    position: fixed;
+    top: 0;
+    background-color: #040f2491;
+    z-index: 1;
+    font-size: 1.1rem;
+    backdrop-filter: blur(20px)
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+/*menu*/
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 2% 1% 2%;
+    color: whitesmoke;
+    align-items: center;
+}
+
+.logo{
+    width: 27%;
+}
+ul{
+    display: flex;
+    position: relative;
+    font-family: 'Work Sans', sans-serif;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+nav ul li{
+    list-style: none;
+    margin: 0px 20px;
+    font-size: 1.3rem;
+}
+
+ul li ul{
+    display: none;
+}
+
+ul li:hover ul{
+    display: block;
+    position: absolute;
+    margin: 0 -20px;
+    padding: 5px;
+    background-color: #040f2491;
+
+}
+
+ul li:hover ul li{
+    padding: 8px 0;
+}
+
+nav .openMenu{
+    display: none;
+}
+
+nav .mainMenu .closeMenu , .icons {
+    display: none;
+}
+
+/*end menu*/
+
+/*video and text*/
+
+.video-container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.text{
+    background-color: #162D54;
+    display: flex;
+    width: 30%;
+    color: whitesmoke;
+}
+
+.text h1{
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    text-align: center;
+}
+
+video{
+    width: 70%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/*end video and text*/
+
+/*search*/
+
+.form-container{
+    width: 45%;
+    position: absolute;
+    top: 75vh;
+    left: 10%;
+    font-size: 1.1rem;
+}
+
+.form{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 ;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+    grid-template-areas: "select";
+}
+
+select option{
+    font-size: 1rem;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    width: 15%;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    padding: 5px;
+}
+
+.select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: #A1700A;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+}
+
+select,
+.select:after {
+    grid-area: select;
+}
+
+.green-button{
+    background-color: #A1700A;
+    border: none;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.search{
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+/*end search*/
+
+.sep{
+    background-color: #162D54;
+    width: 100%;
+    height: 10vh;
+}
+
+/*intro*/
+
+.intro{
+    background-image: url(./assets/carlos-bastias-kQUXev4ihmo-unsplash.jpg);
+    background-position: center;
+    padding: 20vh 10%;
+    text-align: center;
+    color: #162D54;
+    height: 50vh;
+}
+
+.intro-text{
+    backdrop-filter: blur(40px);
+    padding: 3%;
+}
+
+.intro-text h2{
+    font-size: 2rem;
+}
+
+.intro-text p{
+    font-size: 1.3rem;
+    margin-top: 10px;
+    color: whitesmoke;
+}
+
+/*end intro*/
+
+/*paid advertising*/
+
+.paid{
+    display: flex;
+    align-items: center;
+}
+
+.paid img{
+    width: 30%;
+    margin: 5%;
+}
+
+.paid div h3{
+    margin-top: 15%;
+    font-size: 1.5rem;
+    color: #162D54;
+
+}
+
+.paid div p{
+    margin: 5%;
+    padding: 0 5%;
+    border-left: #162D54 solid;
+    color: #162D54;
+
+}
+
+/*end paid advertsing*/
+
+/*expert content*/
+
+.expert{
+    display: flex;
+    margin: 0 5%;
+}
+
+.expert div h3{
+    font-size: 1.5rem;
+    margin: 5%;
+    color: #162D54;
+
+}
+
+.expert div p{
+    margin-right: 5%;
+    padding-right: 5%;
+    border-right: #162D54 solid;
+    color: #162D54;
+
+}
+
+.expert img{
+    width: 40%;
+    margin-top: -5%;
+}
+
+.expert .mobileexpert {
+    display: none;
+}
+
+/*end expert*/
+
+/*effective*/
+
+.effective{
+    display: flex;
+}
+.effective div{
+    background-color: #162D54;
+    width: 100%;
+    padding-left: 40%;
+    margin-top: 30vh;
+    color: whitesmoke;
+}
+
+.effective div h3{
+    font-size: 1.3rem;
+    margin: 3%;
+}
+
+.effective div p{
+    padding: 0 5%;
+    border-left: whitesmoke solid;
+    margin-bottom: 5%;
+}
+
+.img-effective{
+    width: 30%;
+    margin: 5%;
+    position: absolute;
+}
+
+.mobileeffective{
+    display: none;
+}
+
+/*end effective*/
+
+/*social media*/
+
+.social{
+    margin-top: 30vh;
+    padding: 0 5%;
+    color: #162D54;
+}
+
+.social h3{
+    font-size: 1.3rem;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.social-img{
+    width: 30%;
+    padding: 2%;
+}
+
+.mobilesocial{
+    display: none;
+}
+.social div p{
+    margin: 5%;
+    padding: 0 3%;
+    color: whitesmoke;
+}
+
+.social .one , .two{
+    display: flex;
+    align-items: center;
+}
+
+.social .one p{
+    border-right: whitesmoke solid;
+}
+
+.social .two p{
+    border-left: whitesmoke solid;
+}
+
+.social-data{
+    background-color: #162D54;
+}
+
+/*fin social*/
+
+/*immersive --> same styles as expert section*/
+
+.immersive{
+    margin-top: 20vh;
+}
+
+/*end immersive*/
+
+/*powerful --> same styles as paid section*/
+
+.powerful{
+    margin-top: -15vh;
+}
+
+/*contact*/
+
+.contact{
+    background-image: url(./assets/pexels-dayvison-de-oliveira-silva-5733819.jpg);
+    background-position:center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact div{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    margin: 5%;
+    padding: 2%;
+    align-items: center;
+    width: 100%;
+    backdrop-filter: brightness(40%);
+}
+
+.contact div h4{
+    font-size: 1.5rem;
+}
+
+.contact div button{
+    border: whitesmoke solid;
+    padding: 1% 2%;
+    margin-top: 3%;
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/*end contact*/
+
+/*footer*/
+
+footer{
+    background-color: #162D54;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.info-data{
+    display: flex;
+    justify-content: space-around;
+}
+
+.info{
+    display: flex;
+    color: whitesmoke;
+    align-items:flex-start;
+    padding: 5%;
+}
+
+footer svg{
+    color: whitesmoke;
+    padding: 5%;
+}
+
+.info h5{
+    font-size: 1.2rem;
+}
+
+footer p{
+    color: whitesmoke;
+}
+
+.legal{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: whitesmoke solid;
+    padding: 2%;
+}
+
+.fsocial{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+/*animaciones*/
+
+li::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: whitesmoke;
+    transition: width .3s;
+}
+
+li:hover::after{
+    width: 100%;
+}
+
+.search:hover{
+    background-color: #775307;
+    transition: .2s;
+}
+
+.contact div button:hover{
+    border-color: #775307;
+    transition: .2s;
+}
+
+.fsocial svg:hover{
+    color: #775307;   
+    transition: .2s;
+    border-radius: px;
+}
+
+/*responsive*/
+
+@media all and (max-width: 1110px){
+
+    p , .intro-text p{
+        font-size: 2rem;
+    }
+
+    .intro-text h2{
+        font-size: 3rem;
+    }
+
+    /*header*/
+
+    header{
+        width: 100%;
+    }
+
+    .logo{
+        width: 50%;
+    }
+
+    nav .mainMenu{
+        height: 60vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 3rem;
+        background-color: #040f24;
+        display: none;
+    }
+
+    nav ul li, .green-button{
+        font-size: 2rem;
+    }
+
+    nav .mainMenu .closeMenu{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .openMenu{
+        display: block;
+    }
+
+    /*end header*/
+
+    /*search box*/
+
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+    
+    .form-container{
+        width: 80%;
+        font-size: 1.7rem;
+    }
+
+    .form{
+        background-color: whitesmoke;
+        display: flex;
+    }
+    
+    .select{
+        width: auto;
+        font-size: 1.8rem;
+    }
+
+    /*end search box*/
+
+    /*paid*/
+
+    .paid img{
+        width: 40%;
+        margin: 2%;
+        padding-top: 15vh;
+    }
+    
+    .paid div h3{
+        font-size: 3rem;
+    }
+
+    /*end paid*/
+
+    /*expert*/
+
+    .expert{
+        margin: 5vh 0% 10vh 5%;
+        align-items: center;
+    }
+
+    .expert div{
+        width: 90% ;
+    }
+    
+    .expert div h3{
+        font-size: 3rem;    
+    }
+        
+    .expert img{
+        display: none;    
+    }
+
+    .expert .mobileexpert{
+        display: flex;
+        height: 70vh;
+        padding-top: 10vh;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    /*end expert*/
+
+    /*effective*/
+
+    .effective{
+        display: flex;
+        margin-top: -20vh;
+
+    }
+    .effective div{
+        padding-left: 50%;
+        margin-top: 30vh;
+
+    }
+
+    .effective div h3{
+        font-size: 3rem;
+    }
+
+    .img-effective{
+        width: 40%;
+        margin: 5%;
+        position: absolute;
+        padding-top: 10vh;}
+
+    .mobileeffective{
+        display: block;
+        position: absolute;
+        padding-top: 60vh;
+        width: 40%;
+        margin: 5%;
+
+    }
+
+    /*end effective*/
+
+    /*social media*/
+
+    .social{
+        margin-top: 10vh;
+    }
+
+    .social h3{
+        font-size: 3rem;
+    }
+
+    .social-img{
+        display: none;
+    }
+
+    .mobilesocial{
+        display: flex;
+        width: 40%;
+        padding: 2%;
+    }
+
+    .social div p{
+        margin: 5% 0 5% 5%;
+    }
+
+    /*fin social*/
+
+    /*immersive*/
+
+    .mobileimmersive{
+        display: flex;
+    }
+
+    .effective div{
+            margin-top: 20vh;
+    }
+
+    /*end immersive*/
+
+    /*powerful*/
+
+    .powerful{
+        margin-top: -5vh;
+    }
+
+    .power-img{
+        display: none;
+    }
+
+    .powerful h3{
+        padding: 0 5%;
+    }
+    
+}
+
+
+@media (min-width: 280px) and (max-width: 768px){
+    .form-container{
+        display: none;
+    }
+
+    .text h1{
+        overflow: visible;
+        padding-left: 40%;
+    }
+    
+    video{
+        z-index: -2;
+    }
+
+    p{
+        font-size: 1.5rem;
+    }
+
+
+    /*intro*/
+
+    .intro{
+        height: fit-content;
+    }
+
+    .intro-text h2{
+        font-size: 2rem;
+    }
+
+    .intro-text p{
+        font-size: 1.5rem;
+    }
+
+    /*end intro*/
+
+    /*paid advertising*/
+
+    .paid{
+        flex-direction: column-reverse;
+    }
+
+    .paid img{
+        width: 95%;
+        padding-top: 0vh;
+    }
+
+    .paid div h3{
+        font-size: 2rem;
+        margin: 5%;
+    }
+
+    .paid div p{
+        font-size: 1.5rem;
+    }
+
+    /*end paid advertsing*/
+
+    /*expert content*/
+
+    .expert{
+        margin: 0;
+        flex-direction: column;
+        background-image: url(./assets/pexels-laura-tancredi-7078275.jpg);
+        height: fit-content;
+    }
+
+    .expert div{
+        backdrop-filter: blur(10px);
+        margin: 5%;
+    }
+
+    .expert div h3{
+        font-size: 2rem;
+        color: whitesmoke;
+    }
+
+    .expert div p{
+        color: whitesmoke;
+        border-right: whitesmoke  solid;
+        margin: 2%;
+    }
+
+    .expert .mobileexpert{
+        display: none;
+    }
+
+    /*end expert*/
+
+    /*effective*/
+
+    .effective{
+        flex-direction: column;
+        margin-top: 0vh;
+    }
+    .effective div{
+        width: 100%;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .effective div h3{
+        font-size: 2rem;
+        margin: 5%;
+    }
+
+    .effective div p{
+        padding: 0;
+        margin: 5%;
+        padding-left: 3%;
+    }
+
+    .img-effective{
+        width: 90%;
+        margin: 5%;
+        position: static;
+        padding-top: 0;
+    }
+
+    .mobileeffective{
+        display: none;
+    }
+
+    /*end effective*/
+
+    /*social media*/
+
+    .social{
+        margin-top: 5%;
+        padding: 5%;
+        background-color: whitesmoke;
+    }
+
+    .social h3{
+        font-size: 2rem;
+    }
+
+    .mobilesocial{
+        display: none;
+    }
+
+    .social div p{
+        color: #162D54;
+    }
+
+    .social-data{
+        background-color: transparent;
+    }
+
+    /*fin social*/
+
+    /*immersive --> same styles as expert section*/
+
+    .immersive{
+        background-image: url(./assets/pexels-meruyert-gonullu-6152393.jpg);
+    }
+
+    /*end immersive*/
+
+    /*powerful --> same styles as paid section*/
+
+    .powerful{
+        margin-top: 0vh;
+    }
+
+    /*contact*/
+
+    .contact{
+        text-align: center;
+    }
+
+    /*end contact*/
+
+    /*footer*/
+
+    .info-data{
+        flex-direction: column;
+    }
+
+    footer .info h5{
+        font-size: 1.5rem;
+    }
+
+    footer .info p{
+        font-size: 1.5rem;
+    }
+
+    .legal{
+        flex-direction: column;
+    }
+
+    .legal .fsocial{
+        width: 100%;
+        margin-top: 5%
+    }
+
+    /*animaciones*/
+
+    li::after{
+        content: none;
+    }
+
+}
