@@ -531,7 +531,8 @@ li:hover::after{
     }
 
     nav .mainMenu{
-        height: 60vh;
+        height: max-content;
+        padding: 5%;
         position: fixed;
         top: 0;
         right: 0;
@@ -541,8 +542,22 @@ li:hover::after{
         justify-content: center;
         line-height: 3rem;
         background-color: #040f24;
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.3s linear;
     }
+
+    ul li:hover ul{
+        display: block;
+        position: relative;
+        margin: 0 -20px;
+        padding: 5px;
+        background-color: #040f2491;
+        color: #adbedf;
+        transition: all .3s linear;
+        text-align: center;
+    }
+    
 
     nav ul li, .green-button{
         font-size: 2rem;
